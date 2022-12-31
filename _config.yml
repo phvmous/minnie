@@ -16,7 +16,6 @@ lang: en # language setting, i.e. en for English, fr for French
 #    Site settings    #
 #######################
 remote_theme: phvmous/minnie
-
 url: https://phvmous.github.io
 
 plugins:

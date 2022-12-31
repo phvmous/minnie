@@ -1,0 +1,32 @@
+---
+layout: default
+---
+{{ content }}
+<h2>Projects</h2>
+<ul class="card-list">
+    {% for project in site.data.info.projects %}
+    <li class="card">
+        <a href="{{ project.url }}">
+            <span>{{ project.title }}</span>
+            <hr>
+            <p>
+                {{ project.description }}
+            </p>
+        </a>
+    </li>
+    {% endfor %}
+</ul>
+
+<h2>Blog</h2>
+{% if site.posts.size > 0 %}
+<ul class="blog-list">
+    {% for post in site.posts %}
+    <li class="blog-post">
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    </li>
+    {% endfor %}
+</ul>
+{% else %} 
+<p>populate this lonely blog with some posts will ya?</p>
+{% endif %}
+
