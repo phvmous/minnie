@@ -1,0 +1,24 @@
+#######################
+#      Site info      #
+#######################
+title: minnie
+name: Thomas Pham
+email: dtmstyle7@gmail.com
+description: > # description of the website
+
+footer_text: >
+  phvmous. Made with ❤️ on Jekyll
+keywords: jekyll, jekyll-theme, portfolio-website
+icon: 🔥 # the website's favicon
+lang: en # language setting, i.e. en for English, fr for French
+
+#######################
+#    Site settings    #
+#######################
+remote_theme: phvmous/minnie
+
+url: https://phvmous.github.io
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
