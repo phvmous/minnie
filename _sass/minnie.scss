@@ -1,24 +1,65 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
-// ----- general html elements ----- //
-html {
+// global variables
+:root {
     --bg-color: #FFF;
     --heading: #000;
     --text: #000;
     --highlight: red;
     --links: #449544;
-    height: 100%;
+    --borders: #e8e8e8;
+    .dark {
+        display: none;
+    }
 }
 
+html[data-theme='dark'] {
+    --bg-color: #000;
+    --heading: #FFF;
+    --text: #FFF;
+    --highlight: red;
+    --links: #449544;
+    --borders: #e8e8e8;
+    .light {
+        display: none;
+    }
+}
+
+// shared css
+html, body {
+    background-color: var(--bg-color);
+    color: var(--text);
+}
+
+code, .blog > ul > li > span {
+    font-family:'Courier New', Courier, monospace;
+}
+
+.navbar, main, footer {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 960px;
+    padding-left: 1.6em;
+    padding-right: 1.6em;
+}
+
+.projects > ul > li, footer {
+    text-align: center;
+}
+
+.navbar, .projects > ul {
+    display: flex;
+}
+
+.navbar > .brand > span, .projects > ul > li > a {
+    font-weight: bold;
+}
+
+// general css
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-html, body {
-    background-color: var(--bg-color);
-    color: var(--text);
 }
 
 body {
@@ -28,12 +69,16 @@ body {
 }
 
 hr {
-    border: 1px dashed black;
+    border: 1px dashed var(--borders);
 }
 
 a {
     text-decoration: none;
     color: var(--links);
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 li {
@@ -47,12 +92,11 @@ p {
 table, th, td {
     padding: 0.4em;
     border-collapse: collapse;
-    border: 1px solid #000;
+    border: 1px solid var(--borders);
     width: 100%;
 }
 
 code {
-    font-family:'Courier New', Courier, monospace;
     font-size: 0.9rem;
 }
 
@@ -62,90 +106,70 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--heading);
 }
 
-header > nav, main, footer {
-    margin-right: auto;
-    margin-left: auto;
-    max-width: 800px;
-    padding-left: 25px;
-    padding-right: 25px;
+#toggler {
+    background-color: var(--bg-color);
+    border: none;
+    cursor: pointer;
 }
 
+// nav menu
 header {
-    border-bottom: 1px solid #e8e8e8;
+    border-bottom: 1px solid var(--borders);
     width: 100%;
 }
 
-header > nav > a {
+.brand {
     color: black;
 }
 
-header > nav > a > span, main > section:nth-child(2) > ul > li > a {
-    font-weight: bold;
-}
-
-header > nav > ul > li, main > section:nth-child(4) > ul > li {
+.navbar > ul > li {
     display: inline-block;
-}
-
-header > nav > ul > li {
     margin-left: 1em;
 }
 
-header > nav, main > section:nth-child(2) > ul, footer {
-    display: flex;
-}
-
-header > nav {
+.navbar {
     justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
     height: 58px;
 }
 
-header > nav, footer {
-    flex-wrap: nowrap;
-}
-
-header > nav, footer {
-    align-items: center;
-}
-
-main > section:nth-child(2) > ul, footer {
+// projects section
+.projects > ul {
     justify-content: center;
-}
-
-footer {
-    height: 4em;
-    margin-top: 2em;
-}
-
-footer > span {
-    font-size: 0.8em;
-}
-
-main > section:nth-child(2) > ul {
     flex-wrap: wrap;
 }
 
-main > section:nth-child(2) > ul > li {
+.projects > ul > li {
     padding: 1em;
-    border: 1px solid #000;
+    border: 1px solid var(--borders);
     border-radius: 0.5em;
     width: 14em;
-    text-align: center;
     margin-right: 0.5em;
     margin-left: 0.5em;
     margin-bottom: 1em; 
 }
 
-main > section:nth-child(3) > ul > li > span {
+// blog section
+.blog > ul > li > span {
     margin-right: 1em;
-    font-family:'Courier New', Courier, monospace;
 }
 
-main > section:nth-child(3) > ul {
+.blog > ul {
     margin-left: 2.4em;
     margin-bottom: 1.5em;
 }
 
-main > section:nth-child(3) > ul li {
+.blog > ul > li {
     list-style: initial;
+}
+
+// footer
+footer {
+    margin-bottom: 7em;
+    margin-top: 1em;
+}
+
+footer > span {
+    font-size: 0.8em;
 }

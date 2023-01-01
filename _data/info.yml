@@ -9,7 +9,7 @@ navbar:
   - title:
     url:
 
-# project information that will appear on the homepage, can have up to 6
+# projects that will appear on the homepage, you can add more if you like
 projects:
   - title: Project 1
     url: p1

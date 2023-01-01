@@ -1,5 +1,5 @@
-<nav>
-    <a href="{{ site.url }}"><span>phvmous</span> [ fey-muhs ]</a>
+<nav class="navbar">
+    <a href="{{ site.url }}" class="brand"><span>{{ site.brand }}</span> {{ site.brand_tag }}</a>
     <ul>
         {% if site.data.info.navbar.size > 0 %}
         {% for link in site.data.info.navbar %}
@@ -8,8 +8,10 @@
         </li>
         {% endfor %}
         {% endif %}
+        {% if site.dark_mode_toggle %}
         <li>
-            <a href="#">🌗</a>
+            <button id="toggler"><span class="light">🌗</span><span class="dark">🌓</span></button>
         </li>
+        {% endif %}
     </ul>
 </nav>

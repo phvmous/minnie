@@ -1,15 +1,18 @@
 #######################
 #      Site info      #
 #######################
-title: phvmous [ fey-muhs ] | "something need doing?"
+title: phvmous [ fey-muhs ] # the title of the website
+tagline: "something need doing?"
+brand: phvmous
+brand_tag: "[ fey-muhs ]"
 name: Thomas Pham
 email: dtmstyle7@gmail.com
-description: > # description of the website
+description: > # meta data description
   The personal website of Thomas Pham, a software engineer and master's student at UPenn.
-footer_text: > # text that will appear next to the Copyright symbol
-  phvmous. All rights reserved. Made with ❤️ on Jekyll
+footer_text: > # text that will appear at the bottom next to the Copyright statement
+  phvmous. Made with ❤️ on Jekyll
 keywords: jekyll-theme, jekyll, portfolio, minnie
-icon: 🔥 # the website's favicon
+icon: 🔥 # the favicon, you can be hip and use an emoji
 lang: en # language setting, i.e. en for English, fr for French
 
 #######################
@@ -17,9 +20,9 @@ lang: en # language setting, i.e. en for English, fr for French
 #######################
 remote_theme: phvmous/minnie
 url: https://phvmous.github.io # the hostname of your site, i.e. if Github pages then https://your-username.github.io
-github: phvmous
-linkedin: phamous
-
+github: phvmous # github username
+linkedin: phamous # linkedin username
+dark_mode_toggle: true # enable to allow the dark mode toggle button to appear in the nav bar, default is true
 
 plugins:
   - jekyll-seo-tag

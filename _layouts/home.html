@@ -3,48 +3,36 @@ layout: default
 ---
 <!-- about section -->
 <section>
-{{ content }}
+    {{ content }}
 </section>
 
 <!-- project section-->
-<section>
-<h2>Projects</h2>
-<ul>
-    {% for project in site.data.info.projects %}
-    <li>
-        <a href="{{ project.url }}">
-            <span>{{ project.title }}</span>
-        </a>
-        <hr>
-        <p>
-            {{ project.description }}
-        </p>
-    </li>
-    {% endfor %}
-</ul>
+<section class="projects">
+    <h2>Projects</h2>
+    <ul>
+        {% for project in site.data.info.projects %}
+        <li>
+            <a href="{{ project.url }}"><span>{{ project.title }}</span></a>
+            <hr>
+            <p>{{ project.description }}</p>
+        </li>
+        {% endfor %}
+    </ul>
 </section>
 
 <!-- blog section-->
-<section>
-<h2>Blog</h2>
-{% if site.posts.size > 0 %}
-<ul>
-    {% for post in site.posts %}
-    <li>
-        <span>{{ post.date | date: "%m-%d-%Y" }}»</span>
-        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-    </li>
-    {% endfor %}
-</ul>
-{% else %} 
-<p>populate this lonely blog with some posts will ya?</p>
-{% endif %}
-<hr>
+<section class="blog">
+    <h2>Blog</h2>
+    {% if site.posts.size > 0 %}
+    <ul>
+        {% for post in site.posts %}
+        <li>
+            <span>{{ post.date | date: "%m-%d-%Y" }}»</span>
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %} 
+    <p>populate this lonely blog with some posts will ya?</p>
+    {% endif %}
 </section>
-
-<!-- contact -->
-<section>
-    <h4>Let's sOcIaLiZe.</h4>
-    <p>You can check out my <a href="https://github.com/{{ site.github }}">github page</a>, connect with me on <a href="https://linkedin.com/in/{{ site.linkedin }}">LinkedIn</a>, or send an <a href="mailto:{{ site.email }}">email</a> if you like. </p>
-</section>
-
