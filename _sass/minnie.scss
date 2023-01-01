@@ -52,7 +52,7 @@ table, th, td {
 }
 
 code {
-    font-family: "Courier New";
+    font-family:'Courier New', Courier, monospace;
     font-size: 0.9rem;
 }
 
@@ -83,8 +83,12 @@ header > nav > a > span, main > section:nth-child(2) > ul > li > a {
     font-weight: bold;
 }
 
-header > nav > ul > li {
+header > nav > ul > li, main > section:nth-child(4) > ul > li {
     display: inline-block;
+}
+
+header > nav > ul > li {
+    margin-left: 1em;
 }
 
 header > nav, main > section:nth-child(2) > ul, footer {
@@ -110,7 +114,7 @@ main > section:nth-child(2) > ul, footer {
 
 footer {
     height: 4em;
-    margin-top: 4em;
+    margin-top: 2em;
 }
 
 footer > span {
@@ -124,10 +128,12 @@ main > section:nth-child(2) > ul {
 main > section:nth-child(2) > ul > li {
     padding: 1em;
     border: 1px solid #000;
+    border-radius: 0.5em;
     width: 14em;
     text-align: center;
     margin-right: 0.5em;
-    margin-left: 0.5em; 
+    margin-left: 0.5em;
+    margin-bottom: 1em; 
 }
 
 main > section:nth-child(3) > ul > li > span {
@@ -137,9 +143,9 @@ main > section:nth-child(3) > ul > li > span {
 
 main > section:nth-child(3) > ul {
     margin-left: 2.4em;
+    margin-bottom: 1.5em;
 }
 
 main > section:nth-child(3) > ul li {
     list-style: initial;
 }
-

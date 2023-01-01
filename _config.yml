@@ -17,6 +17,9 @@ lang: en # language setting, i.e. en for English, fr for French
 #######################
 remote_theme: phvmous/minnie
 url: https://phvmous.github.io # the hostname of your site, i.e. if Github pages then https://your-username.github.io
+github: phvmous
+linkedin: phamous
+
 
 plugins:
   - jekyll-seo-tag
