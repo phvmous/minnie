@@ -1,13 +1,15 @@
 <nav>
+    <a href="{{ site.url }}"><span>phvmous</span> [ fey-muhs ]</a>
     <ul>
+        {% if site.data.info.navbar.size > 0 %}
+        {% for link in site.data.info.navbar %}
         <li>
-            <a href="#blog">blog</a>
+            <a href="{{ link.url }}">{{ link.title }}</a>
         </li>
+        {% endfor %}
+        {% endif %}
         <li>
-            <a href="#projects">projects</a>
-        </li>
-        <li>
-            <a href="#contact">contact</a>
+            <a href="#">🌗</a>
         </li>
     </ul>
 </nav>

@@ -1,0 +1,24 @@
+# populate these fields if you would like to have menu links in the nav bar
+navbar:
+  - title:
+    url:
+    
+  - title:
+    url:
+
+  - title:
+    url:
+
+# project information that will appear on the homepage, can have up to 6
+projects:
+  - title: Project 1
+    url: p1
+    description: this was a project I worked on.
+
+  - title: Project 2
+    url: p2
+    description: this was another project I worked on.
+
+  - title: Project 3
+    url: p3
+    description: this was the other project I worked on.

@@ -1,27 +1,37 @@
 ---
 layout: default
 ---
+<!-- about section -->
+<section>
 {{ content }}
+</section>
+
+<!-- project section-->
+<section>
 <h2>Projects</h2>
-<ul class="card-list">
+<ul>
     {% for project in site.data.info.projects %}
-    <li class="card">
+    <li>
         <a href="{{ project.url }}">
             <span>{{ project.title }}</span>
-            <hr>
-            <p>
-                {{ project.description }}
-            </p>
         </a>
+        <hr>
+        <p>
+            {{ project.description }}
+        </p>
     </li>
     {% endfor %}
 </ul>
+</section>
 
+<!-- blog section-->
+<section>
 <h2>Blog</h2>
 {% if site.posts.size > 0 %}
-<ul class="blog-list">
+<ul>
     {% for post in site.posts %}
-    <li class="blog-post">
+    <li>
+        <span>{{ post.date | date: "%m-%d-%Y" }}»</span>
         <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
     </li>
     {% endfor %}
@@ -29,4 +39,5 @@ layout: default
 {% else %} 
 <p>populate this lonely blog with some posts will ya?</p>
 {% endif %}
+</section>
 

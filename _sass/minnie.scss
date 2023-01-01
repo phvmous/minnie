@@ -1,12 +1,145 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
+// ----- general html elements ----- //
 html {
+    --bg-color: #FFF;
+    --heading: #000;
+    --text: #000;
+    --highlight: red;
+    --links: #449544;
     height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    background-color: var(--bg-color);
+    color: var(--text);
 }
 
 body {
     font-family: "Inter", helvetica, sans-serif;
     font-size: 1.0rem;
     line-height: 2;
-    margin: 0;
 }
+
+hr {
+    border: 1px dashed black;
+}
+
+a {
+    text-decoration: none;
+    color: var(--links);
+}
+
+li {
+    list-style: none;
+}
+
+p {
+    margin: 1em 0;
+}
+
+table, th, td {
+    padding: 0.4em;
+    border-collapse: collapse;
+    border: 1px solid #000;
+    width: 100%;
+}
+
+code {
+    font-family: "Courier New";
+    font-size: 0.9rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 1.4em;
+    margin-bottom: 0.7em;
+    color: var(--heading);
+}
+
+header > nav, main, footer {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 800px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+header {
+    border-bottom: 1px solid #e8e8e8;
+    width: 100%;
+}
+
+header > nav > a {
+    color: black;
+}
+
+header > nav > a > span, main > section:nth-child(2) > ul > li > a {
+    font-weight: bold;
+}
+
+header > nav > ul > li {
+    display: inline-block;
+}
+
+header > nav, main > section:nth-child(2) > ul, footer {
+    display: flex;
+}
+
+header > nav {
+    justify-content: space-between;
+    height: 58px;
+}
+
+header > nav, footer {
+    flex-wrap: nowrap;
+}
+
+header > nav, footer {
+    align-items: center;
+}
+
+main > section:nth-child(2) > ul, footer {
+    justify-content: center;
+}
+
+footer {
+    height: 4em;
+    margin-top: 4em;
+}
+
+footer > span {
+    font-size: 0.8em;
+}
+
+main > section:nth-child(2) > ul {
+    flex-wrap: wrap;
+}
+
+main > section:nth-child(2) > ul > li {
+    padding: 1em;
+    border: 1px solid #000;
+    width: 14em;
+    text-align: center;
+    margin-right: 0.5em;
+    margin-left: 0.5em; 
+}
+
+main > section:nth-child(3) > ul > li > span {
+    margin-right: 1em;
+    font-family:'Courier New', Courier, monospace;
+}
+
+main > section:nth-child(3) > ul {
+    margin-left: 2.4em;
+}
+
+main > section:nth-child(3) > ul li {
+    list-style: initial;
+}
+
