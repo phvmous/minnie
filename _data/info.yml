@@ -13,12 +13,12 @@ navbar:
 projects:
   - title: Project 1
     url: p1
-    description: this was a project I worked on.
+    description: This was a project I worked on.
 
   - title: Project 2
     url: p2
-    description: this was another project I worked on.
+    description: This was another project I worked on.
 
   - title: Project 3
     url: p3
-    description: this was the other project I worked on.
+    description: This was the other project I worked on.

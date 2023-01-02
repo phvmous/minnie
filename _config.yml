@@ -1,16 +1,16 @@
 #######################
 #      Site info      #
 #######################
-title: phvmous [ fey-muhs ] # the title of the website
-tagline: "something need doing?"
-brand: phvmous
-brand_tag: "[ fey-muhs ]"
-name: Thomas Pham
-email: dtmstyle7@gmail.com
+title: minnie [ minh-ney ] # the title of the website
+tagline: "a fast lightweight minimal jekyll theme"
+brand: minnie
+brand_tag: "[ minh-ney ]"
+name: Paul Smith
+email: paulpular@gmail.com
 description: > # meta data description
-  The personal website of Thomas Pham, a software engineer and master's student at UPenn.
+  a fast lightweight minimal jekyll theme
 footer_text: > # text that will appear at the bottom next to the Copyright statement
-  phvmous. Made with ❤️ on Jekyll.
+  minnie. Made with ❤️ on Jekyll.
 keywords: jekyll-theme, jekyll, portfolio, minnie
 icon: 🔥 # the favicon, you can be hip and use an emoji
 lang: en # language setting, i.e. en for English, fr for French
@@ -19,9 +19,10 @@ lang: en # language setting, i.e. en for English, fr for French
 #    Site settings    #
 #######################
 remote_theme: phvmous/minnie
-url: https://phvmous.github.io # the hostname of your site, i.e. if Github pages then https://your-username.github.io
-github: phvmous # github username
-linkedin: phamous # linkedin username
+url: https://your-github.github.io # the hostname of your site, i.e. if Github pages then https://your-username.github.io
+github: paulsmith # github username
+linkedin: paulsmith # linkedin username
+nav_menu: false # enable to have navigation menu links
 dark_mode_toggle: true # enable to allow the dark mode toggle button to appear in the nav bar, default is true
 
 plugins:
