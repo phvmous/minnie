@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
-// global variables
+// global variables and settings for dark mode
 :root {
     --bg-color: #FFF;
     --heading: #000;
@@ -8,6 +8,9 @@
     --highlight: red;
     --links: #449544;
     --borders: #e8e8e8;
+    .light {
+        display: initial;
+    }
     .dark {
         display: none;
     }
@@ -22,6 +25,9 @@ html[data-theme='dark'] {
     --borders: #e8e8e8;
     .light {
         display: none;
+    }
+    .dark {
+        display: initial;
     }
 }
 
@@ -60,6 +66,13 @@ code, .blog > ul > li > span {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: all 500ms;
 }
 
 body {
@@ -119,7 +132,7 @@ header {
 }
 
 .brand {
-    color: black;
+    color: var(--text);
 }
 
 .navbar > ul > li {
